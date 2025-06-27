@@ -1,14 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Flask
+
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return "Hello depuis Flask !"
-
-@app.route('/aide', methods=['POST'])
-def aide():
-    question = request.json.get("question")
-    return jsonify(reponse=f"Indice IA : {question}")
+def hello_world():
+    return 'Hello, World!'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
