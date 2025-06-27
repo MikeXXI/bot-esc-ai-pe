@@ -1,6 +1,6 @@
-# API Flask - Pont entre le jeu et Botpress
+# API Flask - Pont entre le jeu et OpenAI
 
-Cet API Flask sert de passerelle entre le jeu et le Botpress. L'API reçoit les questions du joueur, les enrichit avec le contexte (salle, environnement), puis interroge Botpress pour fournir une réponse adaptée.
+Cet API Flask sert de passerelle entre le jeu et OpenAI. L'API reçoit les questions du joueur, les enrichit avec le contexte (salle, environnement), puis interroge OpenAI pour fournir une réponse adaptée.
 
 ## Arborescence
 
@@ -13,15 +13,15 @@ api/
 ├── models/
 │   └── __init__.py
 └── services/
-    └── botpress_service.py
+    └── openai_service.py
 ```
 
 ## Installation
 
 1. **Cloner le dépôt**  
    ```bash
-   git clone https://github.com/MikeXXI/esc-ai-pe.git
-   cd esc-ai-pe/api
+   git clone https://github.com/MikeXXI/bot-esc-ai-pe.git
+   cd bot-esc-ai-pe/api
    ```
 
 2. **Créer un environnement virtuel**  
@@ -69,15 +69,13 @@ L'API sera accessible sur `http://0.0.0.0:5000/`.
 
 - `app.py` : Point d'entrée de l'application Flask.
 - `bridge/routes.py` : Définit les routes de l'API.
-- `services/botpress_service.py` : Gère la communication avec Botpress.
+- `services/openai_service.py` : Gère la communication avec OpenAI.
 - `models/` : (À compléter selon les besoins du projet.)
 
 ## Configuration
 
-- Modifier l'URL de Botpress dans `services/botpress_service.py` selon votre déploiement.
+- Modifier l'URL de OpenAI dans `services/openai_service.py` selon votre déploiement.
 
 ---
 
 **Auteur** : Lilian Chardon, Lisa Lucas
-
-**Licence** : MIT
