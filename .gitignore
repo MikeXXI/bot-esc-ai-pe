@@ -2,4 +2,8 @@
 .vscode/*
 !.vscode/extensions.json
 
+# Python virtual environment
 venv
+
+# API keys and sensitive information
+API_KEY

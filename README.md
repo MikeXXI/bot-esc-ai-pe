@@ -74,7 +74,10 @@ L'API sera accessible sur `http://0.0.0.0:5000/`.
 
 ## Configuration
 
-- Modifier l'URL de OpenAI dans `services/openai_service.py` selon votre déploiement.
+- **Clé API OpenAI** :  
+  Créez un fichier `API_KEY` dans le répertoire racine de l'API et ajoutez votre clé API OpenAI à l'intérieur.
+- **URL OpenAI** :  
+  Modifiez la variable `OPENAI_URL` dans `services/openai_service.py` si nécessaire pour correspondre à votre déploiement OpenAI.
 
 ---
 
