@@ -3,6 +3,10 @@ import requests
 import openai
 
 OPENAI_URL = "https://api.openai.com/v1/chat/completions"
+# Charger la clé API OpenAI depuis un fichier
+# Assurez-vous que le fichier API_KEY contient uniquement la clé API sans espaces ni nouvelles lignes
+# Exemple de contenu du fichier API_KEY :
+# sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 with open("API_KEY", "r") as f:
     OPENAI_API_KEY = f.read().strip()
 
@@ -12,6 +16,7 @@ def send_message_to_openai(question, environment, room):
     message = f"{context} Question : {question}"
 
     payload = {
+        "model": "gpt-4.1-nano",
         "messages": [
             {"role": "user", "content": message}
         ]

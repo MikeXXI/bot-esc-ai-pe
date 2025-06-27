@@ -1,18 +1,24 @@
 from flask import Blueprint, request, jsonify
-from src.services.botpress_service import send_message_to_botpress
+from services.openai_service import send_message_to_openai
 
-api = Blueprint('api', __name__)
-
-@api.route('/ask', methods=['POST'])
-def ask_bot():
-    data = request.json
-    question = data.get('question')
-    environment = data.get('environment')
-    room = data.get('room')
-
-    if not question or not environment or not room:
-        return jsonify({'error': 'Missing required parameters'}), 400
-
-    response = send_message_to_botpress(question, environment, room)
-
+# Création du blueprint pour les routes de l'API
+api_bp = Blueprint('api', __name__)
+@api_bp.route('/ask', methods=['POST'])
+def ask_openai():
+    """
+    Route pour envoyer une question à OpenAI et obtenir une réponse.
+    """
+    data = request.get_json()
+    
+    # Vérification des données reçues
+    if not data or 'question' not in data or 'environment' not in data or 'room' not in data:
+        return jsonify({"error": "Invalid input"}), 400
+    
+    question = data['question']
+    environment = data['environment']
+    room = data['room']
+    
+    # Appel au service OpenAI
+    response = send_message_to_openai(question, environment, room)
+    
     return jsonify(response)

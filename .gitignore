@@ -5,5 +5,8 @@
 # Python virtual environment
 venv
 
+# Python cache files
+__pycache__/
+
 # API keys and sensitive information
 API_KEY

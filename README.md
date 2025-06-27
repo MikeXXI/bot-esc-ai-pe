@@ -46,7 +46,7 @@ L'API sera accessible sur `http://0.0.0.0:5000/`.
 ## Utilisation
 
 - **Endpoint principal :**  
-  `POST /ask`  
+  `POST /api/ask`  
   Permet d'envoyer une question à Botpress avec le contexte du jeu.
 
   **Exemple de requête :**
@@ -63,6 +63,12 @@ L'API sera accessible sur `http://0.0.0.0:5000/`.
   {
     "response": "Essayez d'utiliser la clé trouvée sous le tapis."
   }
+  ```
+
+- **Essai de requête OpenAI :**
+  Commande pour tester l'API OpenAI directement :
+  ```bash
+  curl -X POST http://127.0.0.1:5000/api/ask -H "Content-Type: application/json" -d '{"question":"Votre question","environment":"prod","room":"A1"}'
   ```
 
 ## Structure du code
