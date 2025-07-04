@@ -1,0 +1,6 @@
+Esc-AI-pe est un jeu escape game où le joueur est accompagné par une intelligence artificielle
+qui incarne le grand Sphinx. Le joueur doit résoudre des énigmes pour changer de salle et s'échapper
+en trouvant le nez du Sphinx. Le jeu est divisé en plusieurs salles, chacune avec ses propres énigmes et défis.
+Le joueur interagit avec l'IA pour obtenir des indices et des conseils, mais doit aussi
+faire preuve de logique et de réflexion pour avancer dans le jeu. L'objectif final est de retrouver
+le nez du Sphinx, qui est caché dans la dernière salle.

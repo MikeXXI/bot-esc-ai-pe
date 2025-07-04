@@ -10,3 +10,7 @@ __pycache__/
 
 # API keys and sensitive information
 API_KEY
+
+# ChromaDB data
+chroma_db/
+# Vector store data
