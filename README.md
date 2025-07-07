@@ -92,8 +92,11 @@ L'API sera accessible sur `http://0.0.0.0:5000/`.
 
 - **Clé API OpenAI** :  
   Créez un fichier `API_KEY` dans le répertoire racine de l'API et ajoutez votre clé API OpenAI à l'intérieur.
-- **URL OpenAI** :  
-  Modifiez la variable `OPENAI_URL` dans `services/openai_service.py` si nécessaire pour correspondre à votre déploiement OpenAI.
+- **Intégrer la Clé API dans l'environnement** :  
+  Assurez-vous que la clé API est chargée dans l'environnement avant de lancer l'application Flask. Vous pouvez le faire en ajoutant la ligne suivante dans votre terminal :
+  ```bash
+  export OPENAI_API_KEY=$(cat API_KEY)
+  ```
 
 ---
 
