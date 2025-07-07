@@ -14,6 +14,10 @@ api/
 │   └── __init__.py
 └── services/
     └── openai_service.py
+    └── vector_service.py
+└── scripts/
+    └── vectorize.py
+└── API_KEY 
 ```
 
 ## Installation
@@ -57,7 +61,6 @@ L'API sera accessible sur `http://0.0.0.0:5000/`.
   ```json
   {
     "question": "Comment ouvrir la porte ?",
-    "environment": "sombre",
     "room": "salle 2"
   }
   ```
@@ -72,7 +75,7 @@ L'API sera accessible sur `http://0.0.0.0:5000/`.
 - **Essai de requête OpenAI :**
   Commande pour tester l'API OpenAI directement :
   ```bash
-  curl -X POST http://127.0.0.1:5000/api/ask -H "Content-Type: application/json" -d '{"question":"Votre question","environment":"prod","room":"A1"}'
+  curl -X POST http://127.0.0.1:5000/api/ask -H "Content-Type: application/json" -d '{"question":"Votre question","room":"A1"}'
   ```
 
 ## Structure du code
@@ -80,7 +83,10 @@ L'API sera accessible sur `http://0.0.0.0:5000/`.
 - `app.py` : Point d'entrée de l'application Flask.
 - `bridge/routes.py` : Définit les routes de l'API.
 - `services/openai_service.py` : Gère la communication avec OpenAI.
-- `models/` : (À compléter selon les besoins du projet.)
+- `services/vector_service.py` : Gère la recherche contextuelle dans la base de données vectorielle.
+- `scripts/vectorize.py` : Script pour initialiser la base de données vectorielle.
+- `requirements.txt` : Liste des dépendances Python nécessaires.
+- `models/` : Contient les modèles de données (actuellement vide).
 
 ## Configuration
 
