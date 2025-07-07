@@ -1,7 +1,10 @@
 from flask import Flask
 from bridge.routes import api_bp
+from flask_cors import CORS
 
 app = Flask(__name__)
+# Enable CORS for all routes
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 app.register_blueprint(api_bp, url_prefix='/api')
 
 @app.route('/')
