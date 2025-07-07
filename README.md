@@ -47,7 +47,7 @@ L'API sera accessible sur `http://0.0.0.0:5000/`.
 
 - **Endpoint principal :**  
   `POST /api/ask`  
-  Permet d'envoyer une question à Botpress avec le contexte du jeu.
+  Permet d'envoyer une question à ChatGPT avec le contexte du jeu.
 
   **Exemple de requête :**
   ```json
