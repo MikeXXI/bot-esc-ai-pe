@@ -35,8 +35,12 @@ api/
    pip install -r requirements.txt
    ```
 
-## Lancement de l'API
+## Configuration Base de Données
+```bash
+python scripts/vectorize.py
+```
 
+## Lancement de l'API
 ```bash
 python app.py
 ```
