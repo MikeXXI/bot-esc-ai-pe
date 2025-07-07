@@ -8,9 +8,6 @@ Explication :
 Plusieurs objets sont disséminués sur la carte. Il faut interagir avec quatre objets dans le bon ordre 
 afin de pouvoir passer à la salle suivante.
 
-Solution (à ne pas partager avec le joueur) :
-Statue d’hippopotame en premier, statue de faucon en deuxième, dague en troisième, statue d’Isis en quatrième.
-
 Indices :
 - Premier indice : Cherche la créature qui veille sur les eaux du Nil, symbole de puissance tranquille.
 - Deuxième indice : Lève les yeux vers celui qui domine le ciel, allié du soleil et protecteur du royaume.
