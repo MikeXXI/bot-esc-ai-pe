@@ -10,13 +10,13 @@ OPENAI_URL = "https://api.openai.com/v1/chat/completions"
 with open("API_KEY", "r") as f:
     OPENAI_API_KEY = f.read().strip()
 
-def send_message_to_openai(question, environment, room):
+def send_message_to_openai(question, room):
     # Préparer le contexte
-    context = f"Environnement : {environment}. Salle : {room}."
+    context = f"Salle : {room}."
     message = f"{context} Question : {question}"
 
     payload = {
-        "model": "gpt-4.1-nano",
+        "model": "gpt-4.1-mini",
         "messages": [
             {"role": "user", "content": message}
         ]
