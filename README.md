@@ -1,6 +1,6 @@
 # API Flask - Pont entre le jeu et OpenAI
 
-Cet API Flask sert de passerelle entre le jeu et OpenAI. L'API reçoit les questions du joueur, les enrichit avec le contexte (salle, environnement), puis interroge OpenAI pour fournir une réponse adaptée.
+Cet API Flask sert de passerelle entre le jeu et OpenAI. L'API reçoit les questions du joueur, les enrichit avec le contexte (salle et questions), puis interroge OpenAI pour fournir une réponse adaptée.
 
 ## Arborescence
 
