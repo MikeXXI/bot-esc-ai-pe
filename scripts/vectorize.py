@@ -5,13 +5,14 @@ from langchain.chains import RetrievalQA
 from langchain.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 import os
+from langchain.document_loaders import DirectoryLoader
 
 # Charge la clé OpenAI depuis le fichier API_KEY
 with open("API_KEY", "r") as f:
     os.environ["OPENAI_API_KEY"] = f.read().strip()
 
 # 1. Charger un document local
-loader = TextLoader("data/context.txt", encoding="utf-8")
+loader = DirectoryLoader("data", glob="*.txt", loader_cls=TextLoader, loader_kwargs={"encoding": "utf-8"})
 documents = loader.load()
 
 # 2. Split en petits chunks
